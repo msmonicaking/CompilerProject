@@ -1,5 +1,7 @@
 // toks.c - container of Tokens - Jim Hogg, 2020
 
+#define _CRT_SECURE_NO_DEPRECATE
+
 #include <stddef.h>       // offsetof
 #include <stdlib.h>       // malloc
 #include "toks.h"

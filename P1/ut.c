@@ -1,5 +1,7 @@
 // ut.c - Utility functions for the SubC Compiler - Jim Hogg, 2020
 
+#define _CRT_SECURE_NO_DEPRECATE
+
 #include "ut.h"
 
 void utDie2Str(char* func, char* msg) {
@@ -43,13 +45,10 @@ char* utReadFile(char* filePath) {
   //++ Find how big the file is.  Call it fileSize.  Use fseek, ftell, fseek.
   //++ Allocate a buffer, zero-filled, to hold the file contents.
 
-  char* prog = (char*) calloc(1000, 1);                         //--
-
-  //++ Read entire file into the 'prog' buffer
-
-  strcpy(prog, "int main() { int x; x = 42; sayn(x); }");       //--
-
-  return prog;
+   
+   FILE* f = fopen(filePath, 'r');
+   
+   return prog;
 
 }
 
