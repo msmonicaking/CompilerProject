@@ -1,4 +1,4 @@
-// tok.h - Tokens - Jim Hogg, 2020
+// tok.h - Tokens - Jim Hogg, 2020 & modified by Monica King 2022
 
 #pragma once
 

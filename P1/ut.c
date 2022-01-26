@@ -1,4 +1,4 @@
-// ut.c - Utility functions for the SubC Compiler - Jim Hogg, 2020
+// ut.c - Utility functions for the SubC Compiler - Jim Hogg, 2020 & modified by Monica King 2022
 
 #define _CRT_SECURE_NO_DEPRECATE
 

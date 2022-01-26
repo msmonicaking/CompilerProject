@@ -1,4 +1,4 @@
-// main.c - SubC Compiler - Jim Hogg, 2020
+// main.c - SubC Compiler - Jim Hogg, 2020 & modified by Monica King 2022
 //
 // Prog       => Fun+
 // Fun        => "int"  Nam    "(" Pars ")" Body

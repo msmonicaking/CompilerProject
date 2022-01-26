@@ -1,4 +1,4 @@
-// toks.c - container of Tokens - Jim Hogg, 2020
+// toks.c - container of Tokens - Jim Hogg, 2020 & modified by Monica King 2022
 
 #define _CRT_SECURE_NO_DEPRECATE
 
