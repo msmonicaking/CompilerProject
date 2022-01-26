@@ -37,30 +37,26 @@ void utPause() {
   exit(0);
 }
 
+// Read the entire file specified by 'filePath'.  Return its contents.
 char* utReadFile(char* filePath) {
 
-  // Read the entire file specified by 'filePath'.  Return its contents.
+   FILE* fp = fopen(filePath, "r");
 
-  //++ Use fopen.  If operation fails, tell user and stop.
-  //++ Find how big the file is.  Call it fileSize.  Use fseek, ftell, fseek.
-  //++ Allocate a buffer, zero-filled, to hold the file contents.
-
-   FILE* f = fopen(filePath, 'r');
-   int c = 0;
-
-   while (1) {
-      c = fgetc(f);
-      if (feof(f)) {
-         break;
-      }
-      printf("%c", c);
+   if (!fp) {
+      printf("Unable to open file");
+      exit(0);
    }
-   fclose(f);
 
-   char* prog = 'a';
+   fseek(fp, 0L, SEEK_END);
+   int sz = ftell(fp);
+   fseek(fp, 0L, SEEK_SET);
+
+   char* prog = (char*) calloc(sz, 1);
+   fread(prog, 1, sz, fp);
+
+   fclose(fp);
 
    return prog;
-
 }
 
 char* utStrndup(char* s, int len) {
