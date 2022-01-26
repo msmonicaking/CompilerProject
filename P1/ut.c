@@ -45,9 +45,20 @@ char* utReadFile(char* filePath) {
   //++ Find how big the file is.  Call it fileSize.  Use fseek, ftell, fseek.
   //++ Allocate a buffer, zero-filled, to hold the file contents.
 
-   
    FILE* f = fopen(filePath, 'r');
-   
+   int c = 0;
+
+   while (1) {
+      c = fgetc(f);
+      if (feof(f)) {
+         break;
+      }
+      printf("%c", c);
+   }
+   fclose(f);
+
+   char* prog = 'a';
+
    return prog;
 
 }
