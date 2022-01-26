@@ -1,0 +1,3 @@
+C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test01.subc
+C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test02.subc
+C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test03.subc

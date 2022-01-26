@@ -1,4 +1,5 @@
-// lex.c - Lexical Analyzer for the SubC Compiler - Jim Hogg 2020 & modified by Monica King 2022
+// lex.c - Lexical Analyzer for the SubC Compiler - Jim Hogg 2020
+//                                               & modified by Monica King 2022
 
 #include "lex.h"
 
@@ -92,15 +93,16 @@ Tok* lexNum(Lex* lex) {
   long sum = lexPeek0(lex) - '0';                     // eg: 1
   char c = lexMove1(lex);
 
-  //++ Step along the input string until we hit a non-digit.  Accumulate
-  //++ result into variable 'sum'
-
-  lexMove1(lex); lexMove1(lex); lexMove1(lex);                        //--
+  while (isdigit(c)) {
+     c = lexMove1(lex);
+     sum *= 10;
+     sum += c - '0';
+  }
 
   int len = lex->pos - start;
   char* lexeme = utStrndup(&lex->text[start], len);
 
-  Tok* tok = tokNew(TOKNUM, "999", 999, lex->linNum, lex->colNum);    //--
+  Tok* tok = tokNew(TOKNUM, lexeme, sum, lex->linNum, lex->colNum);
   return tok;
 }
 
