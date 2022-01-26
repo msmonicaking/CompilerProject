@@ -37,13 +37,13 @@ Toks* lexAll(Lex* lex) {
 // the SubC language.  If yes, adjust the Token kind accordingly
 // ============================================================================
 void lexKeyword(Tok** tok) {
-  Tok* p = *tok;                  // alias
-  char* s = p->lexeme;
+   Tok* p = *tok;                  // alias
+   char* s = p->lexeme;
 
-  //++ Add checks for "int" and "while"
-
-  if (strcmp(s, "if")       == 0) { p->kind = TOKIF;       return; }
-  if (strcmp(s, "return")   == 0) { p->kind = TOKRET;      return; }
+   if (strcmp(s, "int")      == 0) { p->kind = TOKINT;      return; }
+   if (strcmp(s, "while")    == 0) { p->kind = TOKWHILE;    return; }
+   if (strcmp(s, "if")       == 0) { p->kind = TOKIF;       return; }
+   if (strcmp(s, "return")   == 0) { p->kind = TOKRET;      return; }
 }
 
 // ============================================================================

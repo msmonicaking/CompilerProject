@@ -30,4 +30,3 @@ char  lexPeek1(Lex* lex);
 Tok*  lexPun(Lex* lex);
 char  lexSkip(Lex* lex);
 Tok*  lexStr(Lex* lex);
-
