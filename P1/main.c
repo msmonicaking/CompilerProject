@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
   //++ Insert a loop that steps thru every char of 'prog' and
   //++ prints its decimal (%d) and character (%c) value
   //++ to the console.
-  for (int i = 0; i < 38; i++) {
+  for (int i = 0; i < 100; i++) {
      printf("i = %4d c = %4d %c\n", i, prog[i], prog[i]);
   }
 
