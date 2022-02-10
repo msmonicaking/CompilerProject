@@ -376,7 +376,9 @@ void rexVars(Toks* toks) {
 // eg:      while (n < 10) { n = n + 1; }
 // ============================================================================
 void rexWhile(Toks* toks) {
-
-  //++ Insert code here to recognize a valid SubC 'while' construct.
-
+   rexMust(toks, TOKWHILE);
+   rexMust(toks, TOKLPAREN);
+   rexExp(toks);
+   rexMust(toks, TOKRPAREN);
+   rexBlock(toks);
 }
