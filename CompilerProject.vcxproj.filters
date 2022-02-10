@@ -15,37 +15,47 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="P1\lex.c">
+    <ClCompile Include="P2\lex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="P1\main.c">
+    <ClCompile Include="P2\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="P1\tok.c">
+    <ClCompile Include="P2\rex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="P1\toks.c">
+    <ClCompile Include="P2\tok.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="P1\ut.c">
+    <ClCompile Include="P2\toks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P2\ut.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="P1\lex.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="P2\lex.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="P1\main.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="P2\main.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="P1\tok.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="P2\rex.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="P1\toks.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="P2\tok.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="P1\ut.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="P2\toks.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P2\ut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="P2\testing.sh" />
+    <None Include="P2\UseBeforeDef.subc" />
   </ItemGroup>
 </Project>

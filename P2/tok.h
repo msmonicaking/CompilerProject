@@ -23,4 +23,4 @@ typedef struct _Tok {
 } Tok;
 
 Tok*  tokNew(int kind, char* lexeme, long num, int linNum, int colNum);
-char* tokStr(TokKind kind);
+char* tokStr(TokKind kind); 

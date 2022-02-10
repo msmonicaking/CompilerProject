@@ -144,11 +144,11 @@ void rexType(Toks* toks) {
 // If => "if" "(" Exp ")" Block
 // ============================================================================
 void rexIf(Toks* toks) {
-
-  //++ Insert code here to recognize a valid SubC 'if' construct.
-  //++ This will require 5 lines of code.  Be guided by the grammar
-  //++ snippet in the comment above this function.
-
+   rexMust(toks, TOKIF);
+   rexMust(toks, TOKLPAREN);
+   rexExp(toks);
+   rexMust(toks, TOKRPAREN);
+   rexBlock(toks);
 }
 
 // ============================================================================
