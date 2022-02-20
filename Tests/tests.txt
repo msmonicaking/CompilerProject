@@ -13,3 +13,4 @@ C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests
 C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test13.subc
 C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test14.subc
 C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\test15.subc
+C:\\Users\\msmon\\OneDrive\\Documents\\UW\\WIN22\\CSS448\\CompilerProject\\Tests\\UseBeforeDef.subc

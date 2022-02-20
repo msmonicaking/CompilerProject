@@ -1,0 +1,13 @@
+
+Grammar 1:
+S: A, B
+A: D, C
+B: g, e
+C: d, c
+D: h, i
+
+Grammar 2:
+S: A
+A: a, C, ε
+B: c, d, ε
+C: e, f

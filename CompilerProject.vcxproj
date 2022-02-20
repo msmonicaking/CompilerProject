@@ -37,6 +37,23 @@
   <ItemGroup>
     <None Include="P2\testing.sh" />
     <None Include="P2\UseBeforeDef.subc" />
+    <None Include="Tests\test01.subc" />
+    <None Include="Tests\test02.subc" />
+    <None Include="Tests\test03.subc" />
+    <None Include="Tests\test04.subc" />
+    <None Include="Tests\test05.subc" />
+    <None Include="Tests\test06.subc" />
+    <None Include="Tests\test07.subc" />
+    <None Include="Tests\test08.subc" />
+    <None Include="Tests\test09.subc" />
+    <None Include="Tests\test10.subc" />
+    <None Include="Tests\test11.subc" />
+    <None Include="Tests\test12.subc" />
+    <None Include="Tests\test13.subc" />
+    <None Include="Tests\test14.subc" />
+    <None Include="Tests\test15.subc" />
+    <None Include="Tests\test99.subc" />
+    <None Include="Tests\UseBeforeDef.subc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
