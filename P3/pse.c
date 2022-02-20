@@ -96,11 +96,12 @@ AstBody* pseBody(Toks* toks) {
 // Eg: add3(x, 15, y)
 // ============================================================================
 AstCall* pseCall(Toks* toks) {
+   AstNam* nam = pseNam(toks);
+   pseMust(toks, 1, TOKLPAREN);                       // "("
+   AstArg* arg = pseArgs(toks);                       // zero or more args
+   pseMust(toks, 1, TOKRPAREN);                       // ")"
 
-  //++ Use the above grammar to complete the body of pseCall.
-  //++ Note that the argument list can contain zero or more Args.
-
-  return NULL;              //--
+   return astNewCall(nam, arg);
 }
 
 // ============================================================================
@@ -158,11 +159,13 @@ AstFun* pseFun(Toks* toks) {
 // If => "if" "(" Exp ")" Block
 // ============================================================================
 AstIf* pseIf(Toks* toks) {
+  pseMust(toks, 1, TOKIF);                                  // "if"
+  pseMust(toks, 1, TOKLPAREN);                              // "("
+  AstExp* exp = pseExp(toks);
+  pseMust(toks, 1, TOKRPAREN);                              // ")"
+  AstBlock* block = pseBlock(toks);
 
-  //++ Use the grammar rule above to complete the body
-  //++ of this function.  6 lines of code.
-
-  return NULL;          //--
+  return astNewIf(exp, block);
 }
 
 // ============================================================================
@@ -402,11 +405,13 @@ AstVar* pseVars(Toks* toks) {
 // eg: while (n < 10) { n = n + 1 ; }
 // ============================================================================
 AstWhile* pseWhile(Toks* toks) {
+   pseMust(toks, 1, TOKWHILE);                        // "while"
+   pseMust(toks, 1, TOKLPAREN);                       // "("
+   AstExp* exp = pseExp(toks);
+   pseMust(toks, 1, TOKRPAREN);                       // ")"
+   AstBlock* block = pseBlock(toks);
 
-  //++ Use the grammar above to write the body of pseWhile.
-  //++ Also, replace the line commented //--
-
-  return NULL;                //--
+  return astNewWhile(exp, block);
 }
 
 // ============================================================================

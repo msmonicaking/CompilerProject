@@ -15,46 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="P2\lex.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="P2\main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="P2\rex.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="P2\tok.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="P2\toks.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="P2\ut.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="P2\lex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="P2\main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="P2\rex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="P2\tok.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="P2\toks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="P2\ut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="P2\testing.sh" />
     <None Include="P2\UseBeforeDef.subc" />
     <None Include="Tests\UseBeforeDef.subc" />
@@ -74,5 +34,63 @@
     <None Include="Tests\test03.subc" />
     <None Include="Tests\test02.subc" />
     <None Include="Tests\test01.subc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="P3\ast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\lex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\pin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\pse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\tok.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\toks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\ut.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P3\visit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="P3\ast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\lex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\pin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\pse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\tok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\toks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\ut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P3\visit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

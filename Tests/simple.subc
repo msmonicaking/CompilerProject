@@ -1,0 +1,6 @@
+int main() {
+  int a; int i;
+  i = says("Hello");
+  i = sayl();
+  return 3;
+}
