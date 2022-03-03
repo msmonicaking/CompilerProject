@@ -1,0 +1,70 @@
+Prog
+   Fun
+      nam = main
+      typ = int
+      Body
+         Vars
+            Var
+               nam = a
+               typ = int
+            Var
+               nam = b
+               typ = int
+            Var
+               nam = i
+               typ = int
+         Asg
+            nam = a
+            Exp
+               num = 0
+         Asg
+            nam = b
+            Exp
+               num = 5
+         Asg
+            nam = i
+            Call
+               says
+               Args
+                  Arg
+                     str = "test06 : Expect = 0 1 2 3 4 Actual = "
+         While
+            Exp
+               nam = a
+               Bop = BOPLT
+               nam = b
+            Block
+               Asg
+                  nam = i
+                  Call
+                     sayn
+                     Args
+                        Arg
+                           nam = a
+               Asg
+                  nam = i
+                  Call
+                     says
+                     Args
+                        Arg
+                           str = " "
+               Asg
+                  nam = a
+                  Exp
+                     nam = a
+                     Bop = BOPADD
+                     num = 1
+         Asg
+            nam = a
+            Exp
+               num = 6
+         Ret
+            Exp
+               nam = a
+
+
+Hit any key to finish
+
+C:\Users\mhking\OneDrive - UW\WIN22\CSS448\CompilerProject\Debug\CompilerProject.exe (process 16744) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
