@@ -31,7 +31,7 @@ void layBuild(Lay* lay, AstFun* astfun) {
     layBuildVars(lay, astfun->body->vars);      // variable rows
   }
   layEnd(lay, astfun);                          // ROLEND row
-  ///layDump(lay);                              // debug
+  layDump(lay);                              // debug
 }
 
 // ============================================================================
@@ -61,11 +61,19 @@ void layBuildIntrinsics(Lay* lay) {
 }
 
 // ============================================================================
-// Add rows into 'lay' for the list of pars defined by 'astpar'
+// Add rows into 'lay' for the list of params defined by 'astpar'
 // ============================================================================
 void layBuildPars(Lay* lay, AstPar* astpar) {
 
-  //++ Complete this function
+   if (astpar == NULL) return;       // function has no local variables
+
+   int off = -4;                     // offset from FP of first param
+
+   while (astpar) {
+      layAdd(lay, astpar->nam->lex, TYPINT, ROLEVAR, off);
+      off -= 4;
+      astpar = (AstVar*)astpar->next;
+   }
 
 }
 
@@ -90,9 +98,14 @@ void layBuildVars(Lay* lay, AstVar* astvar) {
 // the row[] array, of the ROLEFUN row for the function of interest.
 // ============================================================================
 int layCountVars(Lay* lay, int rownum) {
+   int count = 0;
 
-  //++ Complete this function
+   while (lay->row[rownum].role == ROLEVAR) {
+      count++;
+      rownum++;
+   }
 
+   return count;
 }
 
 // ============================================================================
@@ -174,6 +187,7 @@ void layFun(Lay* lay, AstFun* astfun) {
 // ============================================================================
 // Build a new, empty Layout ('nrep' repeats of a Lay struct)
 // ============================================================================
+
 Lay* layNew(int nrep) {
   Lay* lay = calloc(nrep * sizeof(Lay), 1);
   lay->hiIdx = -1;                      // no rows

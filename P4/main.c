@@ -46,10 +46,11 @@ int main(int argc, char* argv[]) {
   ///toksDump(toks);                      // DEBUG: dump Tokens to TokenDump.txt
   toksRewind(toks);
   AstProg* astProg = pseProg(toks);       // parse tokens, build AST
-  ///visitProg(astProg);                  // DEBUG: dump AST to console
+  visitProg(astProg);                  // DEBUG: dump AST to console
 
-  Cg* cg = cgNew();                       // new CodeGen
+  Cg* cg = cgNew();
   cgProg(cg, astProg);                    // codegen the program
+  //cgProg(cgNew(), astProg);                    // codegen the program
 
   // Decide what to call the output assembler file.  So, if input source
   // file is "c:\Users\jimhh\OneDrive\UW\CSS-448-Hogg-Wi21\Tests\test01.subc"

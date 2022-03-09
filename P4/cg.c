@@ -325,7 +325,8 @@ void cgExp(Cg* cg, char* funnam, AstExp* astexp) {
 // ============================================================================
 void cgFun(Cg* cg, AstFun* astfun) {
   layBuild(cg->lay, astfun);                // build layout (par/var offsets)
-  char* funnam = astfun->nam->lex;          // name of current function
+  char* funnam = astfun->nam->lex;  
+  // name of current function
 
   // Emit the label that marks the start location of this function.  For
   // example, if 'funnam' = "add2" then emit the line: "add2: "
@@ -348,15 +349,26 @@ void cgFun(Cg* cg, AstFun* astfun) {
 // If => "if" "(" Exp ")" Block
 // ============================================================================
 void cgIf(Cg* cg, char* funnam, AstIf* astif) {
-  char line[LINESIZE];
+   char line[LINESIZE];
+   char* exitlabel = cgLabel();
 
-  // Note that cgExp returns its answer in D0 if this is an arithmetic
-  // expression.  If it's a Boolean expression, then the answer is returned
-  // in D0 with TRUE = 1 or FALSE = 0
+   cgExp(cg, funnam, astif->exp);                              // result in D0
+   
+   sprintf(line, "\t %s \t %s", "CMPI.L", "#0, D0");
+   emitCode(cg->emit, line);
 
-  //++ Complete this function
+   sprintf(line, "\t %s \t %s", "BEQ", exitlabel);
+   emitCode(cg->emit, line);
 
+   cgBlock(cg, funnam, astif->block);
+
+   sprintf(line, "%s%s", exitlabel, ":");            // exit label
+   emitCode(cg->emit, line);
 }
+
+// Note that cgExp returns its answer in D0 if this is an arithmetic
+// expression.  If it's a Boolean expression, then the answer is returned
+// in D0 with TRUE = 1 or FALSE = 0
 
 // ============================================================================
 // Generate a fresh label.  The sequence generated is L10, L20, L30, etc
@@ -427,7 +439,7 @@ void cgProg(Cg* cg, AstProg* astprog) {
   // Write out "INCLUDE io.X68" to the output assembly buffer
 
   char line[LINESIZE];
-  sprintf(line, "\t %s \t %s", "INCLUDE", "..\\..\\Tests\\io.X68");
+  sprintf(line, "\t %s \t %s", "INCLUDE", "Tests\\io.X68");
   emitCode(cg->emit, line);
 
   // Pre-populate the Layout with intrinsics says, sayn and sayl
@@ -456,8 +468,18 @@ void cgProg(Cg* cg, AstProg* astprog) {
 // 'funnam' is the name of the current function
 // ============================================================================
 void cgProlog(Cg* cg, char* funnam) {
+   char line[LINESIZE];
+   Emit* emit = cg->emit;                                             // alias
 
-  //++ Complete this function
+   // Push FP
+   sprintf(line, "\t %s \t %s", "MOVEA.L", "A7, A6");
+   emitCode(emit, line);
+
+   // copy SP into FP
+   sprintf(line, "\t %s \t %s", "MOVEA.L", "(A6), A6");
+   emitCode(emit, line);
+
+   // make space for local variables
 
 }
 
